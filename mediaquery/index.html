@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <style>
+      /* 미디어쿼리(Media Query) */
+      /* 미디어에 따른 쿼리: 미디어에 따라 적용될 수 있게 하는 문법 */
+      /* CSS에서 화면크기, 방향, 해상도, 기기 종류 등에 딸 ㅏ다른 스타일을 적용할 수 있게 해주는 기능 */
+
+      /* 반응형 디자인과 적응형 디자인 */
+      /* 적응형 디자인: 특정 해상도에 적응하는 서로다른 코딩을 따로따로 짜겠다는 것. 미디어쿼리 활용  */
+      /* 반응형: 미디어 쿼리 없이 순수하게 %이용. 특정 해상도 임계점 없이 쭉 통일된 스타일 */
+
+      /* 미디어타입 */
+      /* - all(기본값), screen(pc/mobile), print(인쇄), speech(음성출력장치) */
+      /* 조건 */
+      /* - min-width, max-width, min-height, max-height, orientation, resolution */
+
+      /* 순서 중요 */
+      /* 모바일 사이즈 */
+      h1 {
+        color: orange;
+      }
+
+      /* 태블릿 사이즈 */
+      /* 762 <= ?? <=1024 */
+      @media screen and (min-width: 762px) {
+        h1 {
+          color: green;
+        }
+      }
+
+      /* 데스크탑 사이즈 */
+      /*  1024 <= ??  */
+      @media screen and (min-width: 1024px) {
+        /* 조건에 맞는 스타일 */
+        h1 {
+          color: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>hello</h1>
+  </body>
+</html>

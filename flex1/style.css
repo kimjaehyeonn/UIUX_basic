@@ -1,0 +1,59 @@
+.flex-container {
+  width: 300px;
+  height: 200px;
+  background-color: #c4c4c4;
+  border: 1px solid black;
+  /* 기준이 되는 부모에 display flex
+  main축이 기본값 row로.
+  넓이는 최소한의 넓이로 자동 조정  */
+  display: flex;
+  /* 주축 방향 변경.  기본값 row > row-reverse,column, column-reverse */
+  flex-direction: row;
+  /* 부모영역이 부족할때 자동으로 줄바꿈  wrap, wrap-reverse*/
+  flex-wrap: wrap;
+
+  /* flex-flow: row wrap-reverse;  flex-direction +wrap 한꺼번에 쓰기 */
+
+  /*  주축 방향으로 정렬
+  center:가운데 정렬,
+  spacebetween:양쪽 맞추고 나머지 균일,
+  space-around: 아이템 하나 기준 양쪽 균일하게, 
+  space-evenly: 여백을 기준 균일하게 */
+  justify-content: center;
+
+  /* 교차축 방향으로 정렬
+  stretch: 기본값, 높이가 없을 때만 적용.
+  flex-start: 교차축 시작
+  flex-end: 교차축 끝
+  center: 중앙 배치
+   */
+  align-items: center;
+
+  /* align-content: center; wrap에 의해서 두줄로 되었을 때 */
+}
+
+.flex-item {
+  /* item이 container보다 많다면, 부모의 넓이에 맞게 유연하게 줄어듬 */
+  width: 50px;
+  color: white;
+  background-color: #ff5252;
+  /* item에 쓸 수 있는 속성. 부모의 공간이 부족하더라도 너의 크기를 유지하라*/
+  flex-shrink: 0;
+}
+.flex-item:nth-child(2n) {
+  background-color: #bf5e5e;
+}
+
+/*  부모 공간 남았을 때 남은 공간 차지하도록. flex-grow는 비율대로 나눠가지도록  */
+.item1 {
+  flex-grow: 2;
+}
+.item2 {
+  flex-grow: 1;
+}
+.item3 {
+  flex-grow: 2;
+}
+.item4 {
+  flex-grow: 1;
+}
